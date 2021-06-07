@@ -3,7 +3,7 @@ Linear Mixed Effects model, implemented in Gen.jl (gen.dev).
 
 For input `X[i,j]`, and design matrix `Z[i,j,:]` the model is (abstractly):
 ```julia
-    y[i,j] = X[i,j,:]'β + Z[i,j,:]'ς[i,:] + ϵ[i,j]
+y[i,j] = X[i,j,:]'β + Z[i,j,:]'ς[i,:] + ϵ[i,j]
 ```
 
 where `β` is the vector of fixed effect coefficients,
@@ -19,12 +19,12 @@ Yang, M., Wang, M. & Dong, G. Bayesian variable selection for mixed effects mode
 
 Download dependencies with:
 ```shell
-    julia --project -e "import Pkg; Pkg.instantiate()"
+julia --project -e "import Pkg; Pkg.instantiate()"
 ```
 
 The following will run a 1000 steps of the Gibbs sampler for β, given some
 simulated data from the first experiment in the paper, and print the change
 in joint log probabilities:
 ```shell
-    julia --project src/LinearMixedEffects.jl
+julia --project src/LinearMixedEffects.jl
 ```
