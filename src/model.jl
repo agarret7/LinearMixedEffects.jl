@@ -58,7 +58,6 @@ struct LMEModelHypers
     Σr0::AbstractMatrix{<:Real}
 end
 
-
 """
     lme_model(X, Z, hypers[, beta_prior])
 

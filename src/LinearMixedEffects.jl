@@ -7,6 +7,7 @@ include("inference.jl")
 
 X, Z, hypers, constraints = simulate_data()
 trace, _ = generate(lme_model, (X, Z, hypers), constraints)
+display(get_choices(trace))
 
 # "score" is just the joint probability
 # joint probability p(θ,Y) where Y is the simulated data, and θ is sampled from the prior
