@@ -9,8 +9,9 @@ X, Z, hypers, constraints = simulate_data()
 trace, _ = generate(lme_model, (X, Z, hypers), constraints)
 display(get_choices(trace))
 
-# "score" is just the joint probability
-# joint probability p(θ,Y) where Y is the simulated data, and θ is sampled from the prior
+# "score" is just the log joint probability
+# log joint probability log p(θ,Y)
+# where Y is the simulated data, and θ is sampled from the prior
 init_score = get_score(trace)
 
 println("Before MCMC:")
