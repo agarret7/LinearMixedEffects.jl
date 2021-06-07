@@ -18,7 +18,7 @@ println("Before MCMC:")
 @show trace[:β]
 println()
 
-@timev for i in 1:1
+@timev for i in 1:1000
     global trace
     trace, _ = mh(trace, β_proposal, ())
 end
