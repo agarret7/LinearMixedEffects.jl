@@ -17,7 +17,7 @@ end
     K = info_matrix(X)[J,J]
     ζJ = diagm([trace[(:κ,k)] for k in 1:l if J[k]])
     ΣβJ = inv(K/σ_squared + g/σ_squared*inv(ζJ))
-    μβJ = zeros(sum(J))
+    μβJ = zeros(sum(J))  # TODO add actual equation for conditional posterior mean
 
     β ~ mvnormal(μβJ, ΣβJ)
 end
