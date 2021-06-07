@@ -22,11 +22,11 @@ end
     β ~ mvnormal(μβJ, ΣβJ)
 end
 
-@gen function J_proposal(trace, β_idx::Int)
+@gen function J_proposal(trace)
     error("not implemented")
 end
 
-@gen function g_proposal(trace, β_idx::Int)
+@gen function g_proposal(trace)
     error("not implemented")
 end
 
